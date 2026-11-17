@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Design/Customer.css">
+    <title>Book Ticket - Bus Management System</title>
+</head>
+<body>
+    <div class="brand-hero">
+        <img src="../Images/logo.jpg" id="logo" alt="Bus Management Logo">
+        <h1>Bus Management System</h1>
+        <p>Search & Book Tickets</p>
+    </div>
+
+    <div class="main-content">
+        <div class="admin-nav">
+            <a href="CustomerRegistration.html">Registration</a>
+            <a href="CustomerDashboard.html">Dashboard</a>
+            <a href="CustomerBookTicket.html" class="active">Book Ticket</a>
+            <a href="CustomerTickets.html">My Tickets</a>
+            <a href="CustomerProfile.html">Profile</a>
+            <a href="CustomerSupport.html">Support</a>
+            <a href="../index.html" class="nav-home">← Portal Home</a>
+        </div>
+
+        <fieldset>
+            <legend>Search Available Buses</legend>
+            <table class="form-layout">
+                <tr><td>Departure City:</td><td><select><option>Dhaka</option><option>Chittagong</option><option>Sylhet</option><option>Rajshahi</option><option>Khulna</option></select></td></tr>
+                <tr><td>Destination City:</td><td><select><option>Chittagong</option><option>Dhaka</option><option>Cox's Bazar</option><option>Sylhet</option></select></td></tr>
+                <tr><td>Travel Date:</td><td><input type="date"></td></tr>
+                <tr><td>Coach Type:</td><td><select><option>Any</option><option>AC Business</option><option>AC Sleeper</option><option>Non-AC</option></select></td></tr>
+            </table>
+            <div class="form-buttons">
+                <input type="button" id="submit" value="Search Available Buses" onclick="alert('Searching for buses...')">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Select Your Seat (Available Bus: Shohag Paribahan - AC Business)</legend>
+            
+            <div class="seat-container">
+                <div class="steering-wheel">⭕</div>
+                
+                <div class="seat-grid">
+                    <div class="seat">A1</div><div class="seat">A2</div><div class="aisle"></div><div class="seat booked">A3</div><div class="seat">A4</div>
+                    <div class="seat">B1</div><div class="seat booked">B2</div><div class="aisle"></div><div class="seat">B3</div><div class="seat">B4</div>
+                    <div class="seat">C1</div><div class="seat">C2</div><div class="aisle"></div><div class="seat">C3</div><div class="seat booked">C4</div>
+                    <div class="seat">D1</div><div class="seat">D2</div><div class="aisle"></div><div class="seat">D3</div><div class="seat">D4</div>
+                    <div class="seat">E1</div><div class="seat booked">E2</div><div class="aisle"></div><div class="seat">E3</div><div class="seat">E4</div>
+                    <div class="seat">F1</div><div class="seat">F2</div><div class="aisle"></div><div class="seat">F3</div><div class="seat">F4</div>
+                    <div class="seat">G1</div><div class="seat">G2</div><div class="aisle"></div><div class="seat booked">G3</div><div class="seat">G4</div>
+                    <div class="seat">H1</div><div class="seat">H2</div><div class="aisle"></div><div class="seat">H3</div><div class="seat">H4</div>
+                    <div class="seat">I1</div><div class="seat">I2</div><div class="aisle"></div><div class="seat">I3</div><div class="seat">I4</div>
+                    <div class="seat">J1</div><div class="seat">J2</div><div class="aisle"></div><div class="seat">J3</div><div class="seat">J4</div>
+                </div>
+
+                <div class="seat-legend">
+                    <div><span class="legend-box" style="background-color: white; border: 2px solid #cbd5e1;"></span> Available</div>
+                    <div><span class="legend-box" style="background-color: #10b981;"></span> Selected</div>
+                    <div><span class="legend-box" style="background-color: #fee2e2; border: 2px solid #fca5a5;"></span> Booked</div>
+                </div>
+            </div>
+
+            <div class="form-buttons" style="text-align: center; margin-top: 20px;">
+                <input type="button" id="submit" value="Confirm Selection & Pay" onclick="alert('Seats selected! Proceeding to payment...')">
+            </div>
+        </fieldset>
+    </div>
+    <div class="site-footer"><h5>Bus Management System &bull; Final Course Project</h5></div>
+
+    <script>
+        document.querySelectorAll('.seat:not(.booked)').forEach(seat => {
+            seat.addEventListener('click', function() {
+                this.classList.toggle('selected');
+            });
+        });
+    </script>
+</body>
+</html>

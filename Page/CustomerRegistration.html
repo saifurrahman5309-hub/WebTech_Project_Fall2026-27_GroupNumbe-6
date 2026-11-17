@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Design/Customer.css">
+    <script src="../JS/Customer.js"></script>
+    <title>Customer Registration</title>
+</head>
+<body>
+    <div class="brand-hero">
+        <img src="../Images/logo.jpg" id="logo" alt="Bus Management Logo">
+        <h1>Bus Management System</h1>
+        <p>Passenger Registration Portal</p>
+    </div>
+
+    <div class="main-content">
+        <div class="admin-nav">
+            <a href="CustomerRegistration.html" class="active">Registration</a>
+            <a href="CustomerDashboard.html">Dashboard</a>
+            <a href="CustomerBookTicket.html">Book Ticket</a>
+            <a href="CustomerTickets.html">My Tickets</a>
+            <a href="CustomerProfile.html">Profile</a>
+            <a href="CustomerSupport.html">Support</a>
+            <a href="../index.html" class="nav-home">← Portal Home</a>
+        </div>
+
+        <form onsubmit="return validateCustomerForm()" onreset="clearAllErrors()" novalidate>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <table class="form-layout">
+                    <tr><td>Full Name:</td><td><input type="text" id="CustomerName" placeholder="Enter full name"><p class="input-error" id="NameError"></p></td></tr>
+                    <tr><td>Email Address:</td><td><input type="email" id="CustomerEmail" placeholder="e.g. name@example.com"><p class="input-error" id="EmailError"></p></td></tr>
+                    <tr><td>Mobile Contact:</td><td><input type="text" id="CustomerPhone" placeholder="e.g. 01712345678"><p class="input-error" id="PhoneError"></p></td></tr>
+                    <tr><td>Gender:</td><td>
+                        <label class="choice-label"><input type="radio" name="gender" value="Male"> Male</label>
+                        <label class="choice-label"><input type="radio" name="gender" value="Female"> Female</label>
+                        <label class="choice-label"><input type="radio" name="gender" value="Other"> Other</label>
+                        <p class="input-error" id="GenderError"></p>
+                    </td></tr>
+                    <tr><td>Date of Birth:</td><td><input type="date" id="CustomerDOB"><p class="input-error" id="DOBError"></p></td></tr>
+                    <tr><td>NID Number:</td><td><input type="text" id="CustomerNID" placeholder="10 digit NID"><p class="input-error" id="NIDError"></p></td></tr>
+                    <tr><td>Present Address:</td><td><input type="text" id="CustomerAddress" placeholder="Enter your full address"><p class="input-error" id="AddressError"></p></td></tr>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend>Account Details</legend>
+                <table class="form-layout">
+                    <tr><td>Username:</td><td><input type="text" id="UserName" placeholder="4 - 15 characters"><p class="input-error" id="UserNameError"></p></td></tr>
+                    <tr><td>Password:</td><td><input type="password" id="Password" placeholder="Enter password"><p class="input-error" id="PasswordError"></p></td></tr>
+                    <tr><td>Confirm Password:</td><td><input type="password" id="ConfirmPassword" placeholder="Re-enter password"><p class="input-error" id="ConfirmError"></p></td></tr>
+                </table>
+            </fieldset>
+
+            <p id="ResultText"></p>
+            <div class="form-buttons">
+                <input type="submit" id="submit" value="Register Customer">
+                <input type="reset" id="reset" value="Clear Form">
+            </div>
+        </form>
+    </div>
+    <div class="site-footer"><h5>Bus Management System &bull; Final Course Project</h5></div>
+</body>
+</html>
