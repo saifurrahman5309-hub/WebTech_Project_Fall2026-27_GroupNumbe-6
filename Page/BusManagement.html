@@ -29,23 +29,23 @@
                 <legend>Register New Bus to Fleet</legend>
                 <table class="form-layout">
                     <tr>
-                        <td><label for="busId">Bus ID:</label></td>
+                        <td class="label-col"><label for="busId">Bus ID:</label></td>
                         <td>
-                            <input type="text" name="busId" id="busId" placeholder="e.g. B-101 or B-1001">
+                            <input type="text" name="busId" id="busId" class="form-control" placeholder="e.g. B-101 or B-1001">
                             <p id="BusIdError" class="input-error"></p>
                         </td>
                     </tr>
                     <tr>
-                        <td><label for="busNumber">Bus Plate Number:</label></td>
+                        <td class="label-col"><label for="busNumber">Bus Plate Number:</label></td>
                         <td>
-                            <input type="text" name="busNumber" id="busNumber" placeholder="e.g. DHAKA-METRO-1101">
+                            <input type="text" name="busNumber" id="busNumber" class="form-control" placeholder="e.g. DHAKA-METRO-1101">
                             <p id="BusNumberError" class="input-error"></p>
                         </td>
                     </tr>
                     <tr>
-                        <td><label for="busType">Coach Type:</label></td>
+                        <td class="label-col"><label for="busType">Coach Type:</label></td>
                         <td>
-                            <select name="busType" id="busType">
+                            <select name="busType" id="busType" class="form-control">
                                 <option value="">Select Bus Type</option>
                                 <option value="AC Deluxe">AC Deluxe</option>
                                 <option value="Non-AC">Non-AC</option>
@@ -55,14 +55,14 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><label for="capacity">Seating Capacity:</label></td>
+                        <td class="label-col"><label for="capacity">Seating Capacity:</label></td>
                         <td>
-                            <input type="number" name="capacity" id="capacity" placeholder="10 to 80 passenger seats">
+                            <input type="number" name="capacity" id="capacity" class="form-control" placeholder="10 to 80 passenger seats">
                             <p id="CapacityError" class="input-error"></p>
                         </td>
                     </tr>
                     <tr>
-                        <td><label>Operational Status:</label></td>
+                        <td class="label-col"><label>Operational Status:</label></td>
                         <td>
                             <label class="choice-label"><input type="radio" name="status" id="activeStatus" value="Active"> Active</label>
                             <label class="choice-label"><input type="radio" name="status" id="inactiveStatus" value="Inactive"> Inactive</label>
@@ -71,7 +71,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><label for="fitnessCert">BRTA Fitness:</label></td>
+                        <td class="label-col"><label for="fitnessCert">BRTA Fitness:</label></td>
                         <td>
                             <label class="choice-label">
                                 <input type="checkbox" name="fitnessCert" id="fitnessCert">

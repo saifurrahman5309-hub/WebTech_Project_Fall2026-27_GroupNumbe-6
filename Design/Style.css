@@ -66,10 +66,6 @@ h1 {
     border-radius: 4%;
 }
 
-.admin-nav a:hover {
-    background-color: #2c3e50;
-}
-
 .admin-nav a.active {
     background-color: #e67e22;
     font-weight: bold;
@@ -104,10 +100,7 @@ h1 {
     text-align: center;
 }
 
-.portal-card.admin-portal {
-    border-top: 4px solid #e67e22;
-    background-color: #fefcf9;
-}
+
 
 .portal-tag {
     font-size: 11px;
@@ -187,27 +180,21 @@ legend {
     color: #2c3e50;
 }
 
-table.form-layout {
+.form-layout {
     width: 730px;
-    border-collapse: collapse;
 }
 
-table.form-layout td {
+.form-layout td {
     padding: 6px;
-    vertical-align: top;
 }
 
-table.form-layout td:first-child {
+.label-col {
     width: 170px;
     font-weight: bold;
     padding-top: 10px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="number"],
-input[type="time"],
-select {
+.form-control {
     width: 500px;
     padding: 7px;
     border: 1px solid #999999;

@@ -29,30 +29,30 @@
                 <legend>Register System User / Staff Account</legend>
                 <table class="form-layout">
                     <tr>
-                        <td><label for="userId">Employee / User ID:</label></td>
+                        <td class="label-col"><label for="userId">Employee / User ID:</label></td>
                         <td>
-                            <input type="text" name="userId" id="userId" placeholder="e.g. USR-101 or USR-1001">
+                            <input type="text" name="userId" id="userId" class="form-control" placeholder="e.g. USR-101 or USR-1001">
                             <p id="UserIdError" class="input-error"></p>
                         </td>
                     </tr>
                     <tr>
-                        <td><label for="name">Full Name:</label></td>
+                        <td class="label-col"><label for="name">Full Name:</label></td>
                         <td>
-                            <input type="text" name="name" id="name" placeholder="Enter Full Name">
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Enter Full Name">
                             <p id="NameError" class="input-error"></p>
                         </td>
                     </tr>
                     <tr>
-                        <td><label for="email">Corporate / Personal Email:</label></td>
+                        <td class="label-col"><label for="email">Corporate / Personal Email:</label></td>
                         <td>
-                            <input type="email" name="email" id="email" placeholder="e.g. employee@busms.com">
+                            <input type="email" name="email" id="email" class="form-control" placeholder="e.g. employee@busms.com">
                             <p id="EmailError" class="input-error"></p>
                         </td>
                     </tr>
                     <tr>
-                        <td><label for="role">Assigned System Role:</label></td>
+                        <td class="label-col"><label for="role">Assigned System Role:</label></td>
                         <td>
-                            <select name="role" id="role">
+                            <select name="role" id="role" class="form-control">
                                 <option value="">Select Role</option>
                                 <option value="Admin">Admin</option>
                                 <option value="Customer">Customer</option>
@@ -63,7 +63,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><label>Access Status:</label></td>
+                        <td class="label-col"><label>Access Status:</label></td>
                         <td>
                             <label class="choice-label"><input type="radio" name="accountStatus" id="statusActive" value="Active"> Active</label>
                             <label class="choice-label"><input type="radio" name="accountStatus" id="statusInactive" value="Inactive"> Inactive</label>
@@ -71,7 +71,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><label for="terms">Authorization:</label></td>
+                        <td class="label-col"><label for="terms">Authorization:</label></td>
                         <td>
                             <label class="choice-label">
                                 <input type="checkbox" name="terms" id="terms">

@@ -29,30 +29,30 @@
                 <legend>Issue / Register Passenger Booking</legend>
                 <table class="form-layout">
                     <tr>
-                        <td><label for="bookingId">Booking PNR / ID:</label></td>
+                        <td class="label-col"><label for="bookingId">Booking PNR / ID:</label></td>
                         <td>
-                            <input type="text" name="bookingId" id="bookingId" placeholder="e.g. BKG-101 or BKG-1001">
+                            <input type="text" name="bookingId" id="bookingId" class="form-control" placeholder="e.g. BKG-101 or BKG-1001">
                             <p id="BookingIdError" class="input-error"></p>
                         </td>
                     </tr>
                     <tr>
-                        <td><label for="passengerName">Passenger Name:</label></td>
+                        <td class="label-col"><label for="passengerName">Passenger Name:</label></td>
                         <td>
-                            <input type="text" name="passengerName" id="passengerName" placeholder="Enter Full Passenger Name">
+                            <input type="text" name="passengerName" id="passengerName" class="form-control" placeholder="Enter Full Passenger Name">
                             <p id="PassengerNameError" class="input-error"></p>
                         </td>
                     </tr>
                     <tr>
-                        <td><label for="passengerPhone">Mobile Contact:</label></td>
+                        <td class="label-col"><label for="passengerPhone">Mobile Contact:</label></td>
                         <td>
-                            <input type="text" name="passengerPhone" id="passengerPhone" placeholder="01XXXXXXXXX (11 digits)">
+                            <input type="text" name="passengerPhone" id="passengerPhone" class="form-control" placeholder="01XXXXXXXXX (11 digits)">
                             <p id="PassengerPhoneError" class="input-error"></p>
                         </td>
                     </tr>
                     <tr>
-                        <td><label for="routeSelect">Booking Route:</label></td>
+                        <td class="label-col"><label for="routeSelect">Booking Route:</label></td>
                         <td>
-                            <select name="routeSelect" id="routeSelect">
+                            <select name="routeSelect" id="routeSelect" class="form-control">
                                 <option value="">Select Route</option>
                                 <option value="Dhaka to Chittagong">Dhaka to Chittagong</option>
                                 <option value="Dhaka to Sylhet">Dhaka to Sylhet</option>
@@ -62,21 +62,21 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><label for="seatNumber">Seat Allocation:</label></td>
+                        <td class="label-col"><label for="seatNumber">Seat Allocation:</label></td>
                         <td>
-                            <input type="text" name="seatNumber" id="seatNumber" placeholder="e.g. A1, B2, C4">
+                            <input type="text" name="seatNumber" id="seatNumber" class="form-control" placeholder="e.g. A1, B2, C4">
                             <p id="SeatNumberError" class="input-error"></p>
                         </td>
                     </tr>
                     <tr>
-                        <td><label for="fare">Fare Amount (BDT):</label></td>
+                        <td class="label-col"><label for="fare">Fare Amount (BDT):</label></td>
                         <td>
-                            <input type="number" name="fare" id="fare" placeholder="e.g. 850">
+                            <input type="number" name="fare" id="fare" class="form-control" placeholder="e.g. 850">
                             <p id="FareError" class="input-error"></p>
                         </td>
                     </tr>
                     <tr>
-                        <td><label>Booking Status:</label></td>
+                        <td class="label-col"><label>Booking Status:</label></td>
                         <td>
                             <label class="choice-label"><input type="radio" name="bookingStatus" id="statusConfirmed" value="Confirmed"> Confirmed</label>
                             <label class="choice-label"><input type="radio" name="bookingStatus" id="statusPending" value="Pending"> Pending</label>
@@ -85,7 +85,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><label for="terms">Counter Verification:</label></td>
+                        <td class="label-col"><label for="terms">Counter Verification:</label></td>
                         <td>
                             <label class="choice-label">
                                 <input type="checkbox" name="terms" id="terms">
