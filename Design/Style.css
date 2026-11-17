@@ -133,10 +133,6 @@ h1 {
     font-size: 14px;
 }
 
-.portal-card.admin-portal .btn-portal {
-    background-color: #e67e22;
-}
-
 /* Dashboard Stats */
 .stats-grid {
     display: flex;
