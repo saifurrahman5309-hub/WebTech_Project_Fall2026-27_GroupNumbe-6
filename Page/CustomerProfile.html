@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Design/Customer.css">
+    <title>My Profile</title>
+</head>
+<body>
+    <div class="brand-hero">
+        <img src="../Images/logo.jpg" id="logo" alt="Bus Management Logo">
+        <h1>Bus Management System</h1>
+        <p>Manage Account Details</p>
+    </div>
+
+    <div class="main-content">
+        <div class="admin-nav">
+            <a href="CustomerRegistration.html">Registration</a>
+            <a href="CustomerDashboard.html">Dashboard</a>
+            <a href="CustomerBookTicket.html">Book Ticket</a>
+            <a href="CustomerTickets.html">My Tickets</a>
+            <a href="CustomerProfile.html" class="active">Profile</a>
+            <a href="CustomerSupport.html">Support</a>
+            <a href="../index.html" class="nav-home">← Portal Home</a>
+        </div>
+
+        <fieldset>
+            <legend>Account Information</legend>
+            <table class="form-layout">
+                <tr><td>Full Name:</td><td>Charlie Davis</td></tr>
+                <tr><td>Email Address:</td><td>charlie.davis@example.com</td></tr>
+                <tr><td>Mobile Number:</td><td>01712345678</td></tr>
+                <tr><td>Date of Birth:</td><td>1995-05-15</td></tr>
+                <tr><td>NID Number:</td><td>1234567890</td></tr>
+                <tr><td>Present Address:</td><td>House 12, Road 5, Dhanmondi, Dhaka</td></tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Membership & Rewards</legend>
+            <table class="form-layout">
+                <tr><td>Current Tier:</td><td><strong>Gold Member</strong></td></tr>
+                <tr><td>Reward Points:</td><td>2,450 Points</td></tr>
+                <tr><td>Total Trips Taken:</td><td>15</td></tr>
+                <tr><td>Member Since:</td><td>January 2023</td></tr>
+            </table>
+            <div class="form-buttons">
+                <input type="button" id="submit" value="Edit Profile Information" onclick="alert('Editing profile...')">
+            </div>
+        </fieldset>
+    </div>
+    <div class="site-footer"><h5>Bus Management System &bull; Final Course Project</h5></div>
+</body>
+</html>
