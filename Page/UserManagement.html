@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Design/Style.css">
+    <script src="../JS/admin.js" defer></script>
+    <title>User &amp; Staff Management - Admin</title>
+</head>
+<body>
+    <div class="brand-hero">
+        <img src="../Images/logo.jpg" id="logo" alt="Bus Logo">
+        <h1>Bus Management System</h1>
+        <p>Administration &amp; Fleet Operations Control</p>
+    </div>
+
+    <div class="main-content">
+        <div class="admin-nav">
+            <a href="../index.html" class="nav-home">&larr; Portal Home</a>
+            <a href="Dashboard.html">Dashboard</a>
+            <a href="BusManagement.html">Bus Fleet</a>
+            <a href="RouteSchedule.html">Routes &amp; Schedules</a>
+            <a href="BookingManagement.html">Bookings</a>
+            <a href="UserManagement.html" class="active">Users</a>
+        </div>
+
+        <form id="userForm">
+            <fieldset>
+                <legend>Register System User / Staff Account</legend>
+                <table class="form-layout">
+                    <tr>
+                        <td><label for="userId">Employee / User ID:</label></td>
+                        <td>
+                            <input type="text" name="userId" id="userId" placeholder="e.g. USR-101 or USR-1001">
+                            <p id="UserIdError" class="input-error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="name">Full Name:</label></td>
+                        <td>
+                            <input type="text" name="name" id="name" placeholder="Enter Full Name">
+                            <p id="NameError" class="input-error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Corporate / Personal Email:</label></td>
+                        <td>
+                            <input type="email" name="email" id="email" placeholder="e.g. employee@busms.com">
+                            <p id="EmailError" class="input-error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="role">Assigned System Role:</label></td>
+                        <td>
+                            <select name="role" id="role">
+                                <option value="">Select Role</option>
+                                <option value="Admin">Admin</option>
+                                <option value="Customer">Customer</option>
+                                <option value="Ticket Checker">Ticket Checker</option>
+                                <option value="Supervisor">Supervisor</option>
+                            </select>
+                            <p id="RoleError" class="input-error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Access Status:</label></td>
+                        <td>
+                            <label class="choice-label"><input type="radio" name="accountStatus" id="statusActive" value="Active"> Active</label>
+                            <label class="choice-label"><input type="radio" name="accountStatus" id="statusInactive" value="Inactive"> Inactive</label>
+                            <p id="AccountStatusError" class="input-error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="terms">Authorization:</label></td>
+                        <td>
+                            <label class="choice-label">
+                                <input type="checkbox" name="terms" id="terms">
+                                Account vetted and authorized by System Administrator
+                            </label>
+                            <p id="TermsError" class="input-error"></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <p id="ResultText"></p>
+
+                <div class="form-buttons">
+                    <input type="submit" id="submit" value="Register Account">
+                    <input type="reset" id="reset" value="Clear Form">
+                </div>
+            </fieldset>
+        </form>
+
+        <fieldset>
+            <legend>Authorized System Users</legend>
+            <table class="data-table" id="userTable">
+                <tr>
+                    <th>User ID</th>
+                    <th>Full Name</th>
+                    <th>Email Address</th>
+                    <th>Assigned Role</th>
+                    <th>Status</th>
+                </tr>
+                <tr id="emptyUserRow">
+                    <td colspan="5">No users registered yet.</td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+
+    <div class="site-footer">
+        <h5>Bus Management System &bull; Final Course Project</h5>
+    </div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Design/Style.css">
+    <script src="../JS/admin.js" defer></script>
+    <title>Booking &amp; Ticket Management - Admin</title>
+</head>
+<body>
+    <div class="brand-hero">
+        <img src="../Images/logo.jpg" id="logo" alt="Bus Logo">
+        <h1>Bus Management System</h1>
+        <p>Administration &amp; Fleet Operations Control</p>
+    </div>
+
+    <div class="main-content">
+        <div class="admin-nav">
+            <a href="../index.html" class="nav-home">&larr; Portal Home</a>
+            <a href="Dashboard.html">Dashboard</a>
+            <a href="BusManagement.html">Bus Fleet</a>
+            <a href="RouteSchedule.html">Routes &amp; Schedules</a>
+            <a href="BookingManagement.html" class="active">Bookings</a>
+            <a href="UserManagement.html">Users</a>
+        </div>
+
+        <form id="bookingForm">
+            <fieldset>
+                <legend>Issue / Register Passenger Booking</legend>
+                <table class="form-layout">
+                    <tr>
+                        <td><label for="bookingId">Booking PNR / ID:</label></td>
+                        <td>
+                            <input type="text" name="bookingId" id="bookingId" placeholder="e.g. BKG-101 or BKG-1001">
+                            <p id="BookingIdError" class="input-error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="passengerName">Passenger Name:</label></td>
+                        <td>
+                            <input type="text" name="passengerName" id="passengerName" placeholder="Enter Full Passenger Name">
+                            <p id="PassengerNameError" class="input-error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="passengerPhone">Mobile Contact:</label></td>
+                        <td>
+                            <input type="text" name="passengerPhone" id="passengerPhone" placeholder="01XXXXXXXXX (11 digits)">
+                            <p id="PassengerPhoneError" class="input-error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="routeSelect">Booking Route:</label></td>
+                        <td>
+                            <select name="routeSelect" id="routeSelect">
+                                <option value="">Select Route</option>
+                                <option value="Dhaka to Chittagong">Dhaka to Chittagong</option>
+                                <option value="Dhaka to Sylhet">Dhaka to Sylhet</option>
+                                <option value="Dhaka to Cox's Bazar">Dhaka to Cox's Bazar</option>
+                            </select>
+                            <p id="RouteSelectError" class="input-error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="seatNumber">Seat Allocation:</label></td>
+                        <td>
+                            <input type="text" name="seatNumber" id="seatNumber" placeholder="e.g. A1, B2, C4">
+                            <p id="SeatNumberError" class="input-error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="fare">Fare Amount (BDT):</label></td>
+                        <td>
+                            <input type="number" name="fare" id="fare" placeholder="e.g. 850">
+                            <p id="FareError" class="input-error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Booking Status:</label></td>
+                        <td>
+                            <label class="choice-label"><input type="radio" name="bookingStatus" id="statusConfirmed" value="Confirmed"> Confirmed</label>
+                            <label class="choice-label"><input type="radio" name="bookingStatus" id="statusPending" value="Pending"> Pending</label>
+                            <label class="choice-label"><input type="radio" name="bookingStatus" id="statusCancelled" value="Cancelled"> Cancelled</label>
+                            <p id="BookingStatusError" class="input-error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="terms">Counter Verification:</label></td>
+                        <td>
+                            <label class="choice-label">
+                                <input type="checkbox" name="terms" id="terms">
+                                Passenger payment and NID verified at counter
+                            </label>
+                            <p id="TermsError" class="input-error"></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <p id="ResultText"></p>
+
+                <div class="form-buttons">
+                    <input type="submit" id="submit" value="Confirm Booking">
+                    <input type="reset" id="reset" value="Clear Form">
+                </div>
+            </fieldset>
+        </form>
+
+        <fieldset>
+            <legend>Recent Passenger Manifest</legend>
+            <table class="data-table" id="bookingTable">
+                <tr>
+                    <th>PNR ID</th>
+                    <th>Passenger</th>
+                    <th>Mobile</th>
+                    <th>Route</th>
+                    <th>Seat</th>
+                    <th>Fare</th>
+                    <th>Status</th>
+                </tr>
+                <tr id="emptyBookingRow">
+                    <td colspan="7">No passenger reservations issued yet.</td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+
+    <div class="site-footer">
+        <h5>Bus Management System &bull; Final Course Project</h5>
+    </div>
+</body>
+</html>

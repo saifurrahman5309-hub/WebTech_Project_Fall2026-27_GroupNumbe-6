@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Design/Style.css">
+    <script src="JS/Index.js" defer></script>
+    <title>Bus Management System</title>
+</head>
+<body>
+    <div class="brand-hero">
+        <img src="Images/logo.jpg" id="logo" alt="Bus Management Logo">
+        <h1>Bus Management System</h1>
+        <p>Inter-City Rapid Transit &amp; Operations Network</p>
+    </div>
+
+    <div class="main-content">
+        <h2 class="portal-section-title">Select User Portal to Access</h2>
+
+        <div class="portal-grid">
+            <div class="portal-card admin-portal">
+                <span class="portal-tag">System Control</span>
+                <h3>Admin Panel</h3>
+                <p>Manage fleet buses, routes, schedules, passenger tickets and system user accounts.</p>
+                <button type="button" class="btn-portal" onclick="goToUser('admin')">Access Admin Panel &rarr;</button>
+            </div>
+
+            <div class="portal-card">
+                <span class="portal-tag">Passenger Services</span>
+                <h3>Customer Portal</h3>
+                <p>Search available inter-district routes, check live seat layouts and purchase tickets online.</p>
+                <button type="button" class="btn-portal" onclick="goToUser('customer')">Enter Customer Portal</button>
+            </div>
+
+            <div class="portal-card">
+                <span class="portal-tag">Terminal Operations</span>
+                <h3>Ticket Checker</h3>
+                <p>Scan passenger boarding passes, verify seat assignments and validate departures.</p>
+                <button type="button" class="btn-portal" onclick="goToUser('ticket checker')">Ticket Checker Portal</button>
+            </div>
+
+            <div class="portal-card">
+                <span class="portal-tag">Fleet Oversight</span>
+                <h3>Supervisor Portal</h3>
+                <p>Monitor real-time bus dispatches, driver assignments and generate operational audit reports.</p>
+                <button type="button" class="btn-portal" onclick="goToUser('supervisor')">Enter Supervisor Portal</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-footer">
+        <h5>Bus Management System &bull; Final Course Project</h5>
+    </div>
+</body>
+</html>
