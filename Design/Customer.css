@@ -168,12 +168,14 @@ input[type="text"],
 input[type="email"],
 input[type="date"],
 input[type="password"],
-select {
+select,
+textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #cbd5e1;
     border-radius: 6px;
     font-size: 14px;
+    font-family: inherit;
     transition: border-color 0.2s;
 }
 
@@ -181,7 +183,8 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="date"]:focus,
 input[type="password"]:focus,
-select:focus {
+select:focus,
+textarea:focus {
     outline: none;
     border-color: #10b981;
     box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
@@ -202,7 +205,11 @@ p.input-error {
     margin: 4px 0 0;
 }
 
-#ResultText {
+#ResultText,
+#SearchResult,
+#SeatResult,
+#TicketResult,
+#ProfileResult {
     text-align: center;
     font-weight: bold;
     padding: 12px;
@@ -211,13 +218,29 @@ p.input-error {
     font-size: 14px;
 }
 
-#ResultText.success {
+#ResultText:empty,
+#SearchResult:empty,
+#SeatResult:empty,
+#TicketResult:empty,
+#ProfileResult:empty {
+    display: none;
+}
+
+#ResultText.success,
+#SearchResult.success,
+#SeatResult.success,
+#TicketResult.success,
+#ProfileResult.success {
     color: #166534;
     background-color: #dcfce7;
     border: 1px solid #22c55e;
 }
 
-#ResultText.failed {
+#ResultText.failed,
+#SearchResult.failed,
+#SeatResult.failed,
+#TicketResult.failed,
+#ProfileResult.failed {
     color: #991b1b;
     background-color: #fee2e2;
     border: 1px solid #ef4444;
@@ -227,8 +250,8 @@ p.input-error {
     margin-top: 15px;
 }
 
-#submit,
-#reset {
+#submit, #SubmitBtn, #EditBtn, #SaveBtn, #SearchBtn, #PayBtn, #SendBtn,
+#reset, #ResetBtn, #CancelEditBtn {
     padding: 10px 20px;
     border: none;
     border-radius: 6px;
@@ -239,22 +262,22 @@ p.input-error {
     transition: all 0.2s;
 }
 
-#submit {
+#submit, #SubmitBtn, #EditBtn, #SaveBtn, #SearchBtn, #PayBtn, #SendBtn {
     background-color: #10b981;
     margin-right: 10px;
     box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
 }
 
-#submit:hover {
+#submit:hover, #SubmitBtn:hover, #EditBtn:hover, #SaveBtn:hover, #SearchBtn:hover, #PayBtn:hover, #SendBtn:hover {
     background-color: #059669;
     box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
 }
 
-#reset {
+#reset, #ResetBtn, #CancelEditBtn {
     background-color: #94a3b8;
 }
 
-#reset:hover {
+#reset:hover, #ResetBtn:hover, #CancelEditBtn:hover {
     background-color: #64748b;
 }
 
@@ -289,6 +312,16 @@ p.input-error {
 
 .data-table tr:nth-child(even) {
     background-color: #f8fafc;
+}
+
+.faq-q {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.faq-q:hover {
+    text-decoration: underline;
+    color: #10b981;
 }
 
 

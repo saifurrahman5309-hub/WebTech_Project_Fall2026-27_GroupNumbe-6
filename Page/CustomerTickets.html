@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Design/Customer.css">
+    <script src="../JS/Customer.js" defer></script>
     <title>My Tickets</title>
 </head>
 <body>
@@ -26,20 +27,21 @@
 
         <fieldset>
             <legend>Active Bookings</legend>
+            <p id="TicketResult"></p>
             <table class="data-table">
                 <tr><th>Ticket #</th><th>Route</th><th>Date</th><th>Seat</th><th>Fare</th><th>Action</th></tr>
                 <tr>
                     <td>TK-9982</td><td>Dhaka → Chittagong</td><td>Dec 15, 2025</td><td>12C</td><td>1,200 BDT</td>
                     <td>
-                        <button style="padding: 6px 12px; background-color: #dc2626; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Cancel</button>
-                        <button style="padding: 6px 12px; background-color: #3b82f6; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Download</button>
+                        <button type="button" onclick="cancelTicket(this)" style="padding: 6px 12px; background-color: #dc2626; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Cancel</button>
+                        <button type="button" onclick="downloadTicket(this)" style="padding: 6px 12px; background-color: #3b82f6; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Download</button>
                     </td>
                 </tr>
                 <tr>
                     <td>TK-9841</td><td>Chittagong → Cox's Bazar</td><td>Dec 18, 2025</td><td>4A</td><td>850 BDT</td>
                     <td>
-                        <button style="padding: 6px 12px; background-color: #dc2626; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Cancel</button>
-                        <button style="padding: 6px 12px; background-color: #3b82f6; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Download</button>
+                        <button type="button" onclick="cancelTicket(this)" style="padding: 6px 12px; background-color: #dc2626; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Cancel</button>
+                        <button type="button" onclick="downloadTicket(this)" style="padding: 6px 12px; background-color: #3b82f6; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Download</button>
                     </td>
                 </tr>
             </table>
