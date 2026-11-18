@@ -4,7 +4,7 @@ function goToUser(user) {
     if (user === "admin") {
         window.location.href = "Page/Dashboard.html";
     } else if (user === "customer") {
-        window.location.href = "Page/CustomerRegistration.html"; // <-- THIS IS THE FIX
+        window.location.href = "Page/CustomerRegistration.html"; 
     } else {
         alert(user.toUpperCase() + " portal is under development by group member.");
     }
