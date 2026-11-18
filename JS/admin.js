@@ -1,14 +1,4 @@
-// =============================================================
-// Bus Management System - Admin JavaScript (admin.js)
-// Form Validation & DOM Manipulation for all Admin Modules
-// Style follows Code No. 1 from web-technologies-exam-practice.md
-// =============================================================
-
 document.addEventListener("DOMContentLoaded", function () {
-
-    // ---------------------------------------------------------
-    // 1. Bus Management Form Listener
-    // ---------------------------------------------------------
     let busForm = document.getElementById("busForm");
     if (busForm) {
         busForm.addEventListener("submit", function (event) {
@@ -31,9 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // ---------------------------------------------------------
-    // 2. Route & Schedule Form Listener
-    // ---------------------------------------------------------
     let tripForm = document.getElementById("tripForm");
     if (tripForm) {
         tripForm.addEventListener("submit", function (event) {
@@ -58,9 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // ---------------------------------------------------------
-    // 3. Booking Management Form Listener
-    // ---------------------------------------------------------
     let bookingForm = document.getElementById("bookingForm");
     if (bookingForm) {
         bookingForm.addEventListener("submit", function (event) {
@@ -85,9 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // ---------------------------------------------------------
-    // 4. User Management Form Listener
-    // ---------------------------------------------------------
     let userForm = document.getElementById("userForm");
     if (userForm) {
         userForm.addEventListener("submit", function (event) {
@@ -111,14 +92,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
-// =============================================================
-// SHARED HELPER FUNCTION
-// =============================================================
 function showResult(success, text) {
     let result = document.getElementById("ResultText");
     if (!result) return;
+
     result.innerHTML = text;
+
     if (success) {
         result.className = "success";
     } else {
@@ -126,10 +105,6 @@ function showResult(success, text) {
     }
 }
 
-
-// =============================================================
-// 1. BUS MANAGEMENT FUNCTIONS
-// =============================================================
 function validateBusId() {
     let busId = document.getElementById("busId").value.trim();
     let message = document.getElementById("BusIdError");
@@ -253,10 +228,6 @@ function addBusToTable() {
     table.appendChild(tr);
 }
 
-
-// =============================================================
-// 2. ROUTE & SCHEDULE FUNCTIONS
-// =============================================================
 function validateTripId() {
     let tripId = document.getElementById("tripId").value.trim();
     let message = document.getElementById("TripIdError");
@@ -435,10 +406,6 @@ function addTripToTable() {
     table.appendChild(tr);
 }
 
-
-// =============================================================
-// 3. BOOKING MANAGEMENT FUNCTIONS
-// =============================================================
 function validateBookingId() {
     let bookingId = document.getElementById("bookingId").value.trim();
     let message = document.getElementById("BookingIdError");
@@ -602,10 +569,6 @@ function addBookingToTable() {
     table.appendChild(tr);
 }
 
-
-// =============================================================
-// 4. USER MANAGEMENT FUNCTIONS
-// =============================================================
 function validateUserId() {
     let userId = document.getElementById("userId").value.trim();
     let message = document.getElementById("UserIdError");
