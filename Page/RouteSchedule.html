@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Design/Style.css">
+    <script src="../JS/admin.js" defer></script>
+    <title>Route &amp; Schedule Management - Admin</title>
+</head>
+<body>
+    <div class="brand-hero">
+        <img src="../Images/logo.jpg" id="logo" alt="Bus Logo">
+        <h1>Bus Management System</h1>
+        <p>Administration &amp; Fleet Operations Control</p>
+    </div>
+
+    <div class="main-content">
+        <div class="admin-nav">
+            <a href="../index.html" class="nav-home">&larr; Portal Home</a>
+            <a href="Dashboard.html">Dashboard</a>
+            <a href="BusManagement.html">Bus Fleet</a>
+            <a href="RouteSchedule.html" class="active">Routes &amp; Schedules</a>
+            <a href="BookingManagement.html">Bookings</a>
+            <a href="UserManagement.html">Users</a>
+        </div>
+
+        <form id="tripForm">
+            <fieldset>
+                <legend>Add Inter-City Route &amp; Departure Schedule</legend>
+                <table class="form-layout">
+                    <tr>
+                        <td class="label-col"><label for="tripId">Schedule ID:</label></td>
+                        <td>
+                            <input type="text" name="tripId" id="tripId" class="form-control" placeholder="e.g. TRP-101 or TRP-1001">
+                            <p id="TripIdError" class="input-error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col"><label for="startLocation">Departure City:</label></td>
+                        <td>
+                            <input type="text" name="startLocation" id="startLocation" class="form-control" placeholder="e.g. Dhaka">
+                            <p id="StartError" class="input-error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col"><label for="destination">Destination City:</label></td>
+                        <td>
+                            <input type="text" name="destination" id="destination" class="form-control" placeholder="e.g. Chittagong">
+                            <p id="DestError" class="input-error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col"><label for="busSelect">Assigned Coach:</label></td>
+                        <td>
+                            <select name="busSelect" id="busSelect" class="form-control">
+                                <option value="">Select Assigned Bus</option>
+                                <option value="DHAKA-1101 (AC Deluxe)">DHAKA-1101 (AC Deluxe)</option>
+                                <option value="DHAKA-1102 (Non-AC)">DHAKA-1102 (Non-AC)</option>
+                                <option value="CTG-1205 (Sleeper Coach)">CTG-1205 (Sleeper Coach)</option>
+                            </select>
+                            <p id="BusSelectError" class="input-error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col"><label for="driverName">Assigned Driver:</label></td>
+                        <td>
+                            <input type="text" name="driverName" id="driverName" class="form-control" placeholder="e.g. Rafiqul Islam">
+                            <p id="DriverError" class="input-error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col"><label for="departureTime">Departure Time:</label></td>
+                        <td>
+                            <input type="time" name="departureTime" id="departureTime" class="form-control">
+                            <p id="DepartureError" class="input-error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col"><label for="ticketPrice">Ticket Fare (BDT):</label></td>
+                        <td>
+                            <input type="number" name="ticketPrice" id="ticketPrice" class="form-control" placeholder="e.g. 850">
+                            <p id="PriceError" class="input-error"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col"><label for="scheduleConfirm">Route Authorization:</label></td>
+                        <td>
+                            <label class="choice-label">
+                                <input type="checkbox" name="scheduleConfirm" id="scheduleConfirm">
+                                Certified route timing and road permit approved
+                            </label>
+                            <p id="ConfirmError" class="input-error"></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <p id="ResultText"></p>
+
+                <div class="form-buttons">
+                    <input type="submit" id="submit" value="Schedule Route">
+                    <input type="reset" id="reset" value="Clear Form">
+                </div>
+            </fieldset>
+        </form>
+
+        <fieldset>
+            <legend>Active Route Schedules</legend>
+            <table class="data-table" id="tripTable">
+                <tr>
+                    <th>Schedule ID</th>
+                    <th>Transit Route</th>
+                    <th>Assigned Bus</th>
+                    <th>Driver</th>
+                    <th>Departure</th>
+                    <th>Fare</th>
+                </tr>
+                <tr id="emptyTripRow">
+                    <td colspan="6">No scheduled trips configured yet.</td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+
+    <div class="site-footer">
+        <h5>Bus Management System &bull; Final Course Project</h5>
+    </div>
+</body>
+</html>
