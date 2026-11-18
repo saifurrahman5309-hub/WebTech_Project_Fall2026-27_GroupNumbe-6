@@ -1,0 +1,5 @@
+.report-placeholder { 
+    padding: 25px; background: #f8faff; 
+    border-radius: 8px; 
+    color: var(--muted); 
+}

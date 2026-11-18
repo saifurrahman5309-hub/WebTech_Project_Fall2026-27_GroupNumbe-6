@@ -1,0 +1,25 @@
+.assignment-help { 
+    color: var(--muted); 
+    font-size: 12px; 
+    margin-bottom: 15px; 
+}
+
+/* Ticket-checker assignment controls */
+.table-responsive { 
+    width: 100%; 
+    overflow-x: auto; 
+}
+#pageContent select { 
+    min-width: 150px; 
+    padding: 9px 10px; 
+    margin: 3px; 
+}
+#pageContent button { 
+    padding: 9px 14px; 
+    margin: 3px; 
+    cursor: pointer; 
+}
+#pageContent .secondary-btn { 
+    background: #e9edf5; 
+    color: #263248; 
+}
